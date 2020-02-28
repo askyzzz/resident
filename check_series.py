@@ -20,6 +20,8 @@ class RequestUrl():
     def check(self):
         soup = self.getUrl()
         season = soup.find_all("td", {"align": "center"})
+        print(season)
 
 if __name__=='__main__':
-    RequestUrl.check(url)
+    pars = RequestUrl(url)
+    pars.check()
